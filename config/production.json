@@ -1,0 +1,25 @@
+{
+    "network": {
+        "cluster": "mainnet-beta",
+        "commitment": "finalized"
+    },
+    "protocols": {
+        "pumpfun": {
+            "maxRetries": 3,
+            "timeout": 30000
+        },
+        "jupiter": {
+            "routeCacheExpiry": 5000,
+            "quoteCacheExpiry": 3000
+        }
+    },
+    "monitoring": {
+        "performance": {
+            "sampleRate": 0.1,
+            "slowThresholdMs": 500
+        },
+        "errors": {
+            "maxStackTraceLines": 20
+        }
+    }
+}

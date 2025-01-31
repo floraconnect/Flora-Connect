@@ -1,0 +1,53 @@
+{
+    "network": {
+        "cluster": "devnet",
+        "rpcUrl": "https://api.devnet.solana.com",
+        "wsUrl": "wss://api.devnet.solana.com"
+    },
+    "protocols": {
+        "pumpfun": {
+            "maxRetries": 5,
+            "timeout": 60000
+        },
+        "jupiter": {
+            "routeCacheExpiry": 30000,
+            "quoteCacheExpiry": 15000
+        }
+    },
+    "logging": {
+        "level": "debug",
+        "format": "text",
+        "colorize": true
+    },
+    "monitoring": {
+        "performance": {
+            "sampleRate": 1.0
+        }
+    }
+}
+// config/production.json
+{
+    "network": {
+        "cluster": "mainnet-beta",
+        "commitment": "finalized"
+    },
+    "protocols": {
+        "pumpfun": {
+            "maxRetries": 3,
+            "timeout": 30000
+        },
+        "jupiter": {
+            "routeCacheExpiry": 5000,
+            "quoteCacheExpiry": 3000
+        }
+    },
+    "monitoring": {
+        "performance": {
+            "sampleRate": 0.1,
+            "slowThresholdMs": 500
+        },
+        "errors": {
+            "maxStackTraceLines": 20
+        }
+    }
+}

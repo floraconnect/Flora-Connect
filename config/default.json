@@ -1,0 +1,78 @@
+{
+    "network": {
+        "cluster": "mainnet-beta",
+        "rpcUrl": "https://api.mainnet-beta.solana.com",
+        "wsUrl": "wss://api.mainnet-beta.solana.com",
+        "commitment": "confirmed"
+    },
+    "protocols": {
+        "pumpfun": {
+            "enabled": true,
+            "baseUrl": "https://api.pumpfun.io",
+            "maxRetries": 3,
+            "timeout": 30000,
+            "defaultSlippage": 50,
+            "minTradeAmount": 0.1,
+            "maxTradeAmount": 1000
+        },
+        "jupiter": {
+            "enabled": true,
+            "version": "v6",
+            "defaultSlippage": 50,
+            "routeCacheExpiry": 10000,
+            "quoteCacheExpiry": 5000,
+            "maxRoutes": 3
+        },
+        "jito": {
+            "enabled": true,
+            "minStakeAmount": 0.1,
+            "maxStakeAmount": 1000,
+            "unstakePeriod": 172800
+        },
+        "kamino": {
+            "enabled": true,
+            "maxLTV": 0.75,
+            "liquidationThreshold": 0.8,
+            "minCollateralAmount": 0.1
+        },
+        "raydium": {
+            "enabled": true,
+            "version": "v2",
+            "defaultSlippage": 50,
+            "minLiquidity": 1000
+        }
+    },
+    "wallet": {
+        "autoConnect": true,
+        "autoDisconnect": true,
+        "commitment": "confirmed",
+        "derivationPath": "m/44'/501'/0'/0'"
+    },
+    "monitoring": {
+        "performance": {
+            "enabled": true,
+            "sampleRate": 0.1,
+            "slowThresholdMs": 1000
+        },
+        "errors": {
+            "enabled": true,
+            "maxStackTraceLines": 50
+        }
+    },
+    "logging": {
+        "level": "info",
+        "format": "json",
+        "timestamp": true,
+        "colorize": false
+    },
+    "cache": {
+        "prices": {
+            "ttl": 10000,
+            "checkPeriod": 600
+        },
+        "pools": {
+            "ttl": 30000,
+            "checkPeriod": 600
+        }
+    }
+}
